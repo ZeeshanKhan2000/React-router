@@ -1,0 +1,436 @@
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links:hover {
+  background-color: #555;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-icon {
+  display: none;
+  color: #fff;
+}
+
+.fa-bars, .fa-times {
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background-color: #333;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+ 
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    cursor: pointer;
+  }
+}
+
+
+
+/* Hero Section Styling */
+.hero-container {
+  background-image: url('https://source.unsplash.com/random/1600x900'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 0 20px; /* Padding for smaller screens */
+}
+
+.hero-container h1 {
+  font-size: 3rem; /* Large title */
+  margin-bottom: 20px; /* Space between title and subtitle */
+  color: black;
+}
+
+.hero-container p {
+  font-size: 1.5rem; /* Subtitle size */
+  margin-bottom: 40px; /* Space between subtitle and button */
+  color: black;
+}
+
+.hero-button {
+  padding: 15px 30px; /* Button padding */
+  font-size: 1.2rem; /* Button text size */
+  color: #fff; /* Button text color */
+  background-color: #007bff; /* Button background color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hero-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Contact Form Styling */
+.contact-form-container {
+  max-width: 600px; /* Limit the form width */
+  margin: 0 auto; /* Center the form */
+  padding: 20px; /* Add some padding */
+  background: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h2 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+.form-group label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px; /* Space below label */
+  font-weight: bold; /* Bold labels */
+}
+
+input,
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.input-error {
+  border-color: #ff4d4d; /* Red border for invalid input */
+}
+
+.error-message {
+  color: #ff4d4d; /* Red text for error messages */
+  font-size: 0.875rem; /* Smaller font size for error */
+}
+
+.submit-button {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Padding for button */
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1.2rem; /* Button text size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+.contact-form-container {
+  max-width: 600px; /* Limit the form width */
+  margin: 0 auto; /* Center the form */
+  padding: 20px; /* Add some padding */
+  background: white; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative; /* Relative positioning for pseudo-elements */
+  z-index: 1; /* Ensure form is on top */
+}
+
+.contact-page {
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient colors */
+  display: flex; /* Center the form vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.contact-form h2 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+
+.contact-form-container {
+  background-color: white; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding for inner spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 600px; /* Max width */
+  margin: 0 auto; /* Center the form */
+}
+
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+  display: block; /* Make label block level */
+  margin-bottom: 5px; /* Space below label */
+}
+
+input,
+textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6dd5ed; /* Border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.input-error {
+  border-color: red; /* Red border for errors */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  font-size: 0.875em; /* Smaller font size */
+  margin-top: 5px; /* Space above error message */
+}
+
+.submit-button {
+  background-color: #2193b0; /* Button background */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Inner spacing */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition for background */
+  width: 100%; /* Full width */
+}
+
+.submit-button:hover {
+  background-color: #6dd5ed; /* Lighter background on hover */
+}
+
+
+.services-container {
+  padding: 50px 20px; /* Padding for top and bottom */
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center; /* Center the text */
+}
+
+h2 {
+  margin-bottom: 40px; /* Space below the heading */
+  font-size: 2rem; /* Font size for the heading */
+}
+
+.services-cards {
+  display: flex; /* Flexbox for card layout */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: center; /* Center align cards */
+  gap: 20px; /* Space between cards */
+}
+
+.service-card {
+  background-color: white; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px; /* Inner spacing */
+  width: 200px; /* Fixed width for cards */
+  transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-icon {
+  font-size: 2rem; /* Icon size */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+h3 {
+  margin: 10px 0; /* Space above and below the title */
+  font-size: 1.5rem; /* Title font size */
+}
+
+p {
+  color: #555; /* Gray color for description */
+}
+
+
+
+.about-container {
+  padding: 50px 20px; /* Padding for top and bottom */
+  background-color: #ffffff; /* White background for contrast */
+  text-align: center; /* Center the text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  font-size: 2rem; /* Font size for the heading */
+}
+
+p {
+  margin-bottom: 30px; /* Space below the paragraph */
+  line-height: 1.6; /* Better readability */
+  color: #333; /* Dark gray text color */
+}
+
+.about-key-points {
+  text-align: left; /* Align text to the left for the list */
+  margin: 0 auto; /* Center the key points container */
+  max-width: 400px; /* Limit width for better readability */
+}
+
+h3 {
+  margin-bottom: 15px; /* Space below the subheading */
+  font-size: 1.5rem; /* Subheading font size */
+}
+
+ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  margin: 10px 0; /* Space between list items */
+  font-size: 1.1rem; /* List item font size */
+}
+
+
+.footer-container {
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  padding: 20px; /* Padding for top and bottom */
+  text-align: center; /* Center align text */
+}
+
+.footer-links {
+  margin-bottom: 10px; /* Space below links */
+}
+
+.footer-links a {
+  color: white; /* White link color */
+  margin: 0 15px; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-links a:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+.footer-socials {
+  margin: 10px 0; /* Space above and below social icons */
+}
+
+.social-icon {
+  margin: 0 10px; /* Space between social icons */
+  font-size: 1.5rem; /* Icon size */
+  color: white; /* White color */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+.footer-copy {
+  margin-top: 10px; /* Space above copyright */
+  font-size: 0.9rem; /* Font size for copyright */
+}
